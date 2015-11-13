@@ -1,14 +1,12 @@
 package Frame;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
+
 
 import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+
 
 import SubFrame.BottomPanel;
 import SubFrame.DrawPanel;
@@ -17,6 +15,7 @@ import SubFrame.RightDownPanel;
 import SubFrame.RightUpPanel;
 import SubFrame.TopMenu;
 import SubFrame.TopPanel;
+
 
 public class MainFrame extends JFrame{
 
@@ -29,9 +28,12 @@ public class MainFrame extends JFrame{
 	private TopMenu menuBar;
 
 
+
+
 	
 	public MainFrame()
 	{
+	
 		//패널 객체 생성
 		drawPanel = new DrawPanel();
 		topPanel = new TopPanel();
@@ -41,17 +43,22 @@ public class MainFrame extends JFrame{
 		bottomPanel = new BottomPanel();
 		
 		
+		
 		//패널 위치에 배정
 		this.add(drawPanel,BorderLayout.CENTER);
 		this.add(topPanel, BorderLayout.NORTH);
 		this.add(leftPanel, BorderLayout.WEST);
 		
 		JPanel rightMergePanel =new JPanel();
-		rightMergePanel.add(rightUpPanel);
-		rightMergePanel.add(rightDownPanel);
+		rightMergePanel.setLayout( new BorderLayout() );
+		rightMergePanel.add(rightUpPanel,BorderLayout.NORTH);
+		rightMergePanel.add(rightDownPanel, BorderLayout.SOUTH);
+		
 		
 		this.add(rightMergePanel, BorderLayout.EAST);
 		this.add(bottomPanel, BorderLayout.SOUTH);
+		
+		
 		
 
 		//메뉴 생성
