@@ -1,8 +1,7 @@
 package Frame;
 
 import java.awt.BorderLayout;
-
-
+import java.awt.GridLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -50,9 +49,9 @@ public class MainFrame extends JFrame{
 		this.add(leftPanel, BorderLayout.WEST);
 		
 		JPanel rightMergePanel =new JPanel();
-		rightMergePanel.setLayout( new BorderLayout() );
-		rightMergePanel.add(rightUpPanel,BorderLayout.NORTH);
-		rightMergePanel.add(rightDownPanel, BorderLayout.SOUTH);
+		rightMergePanel.setLayout( new GridLayout(2, 1) );
+		rightMergePanel.add(rightUpPanel);
+		rightMergePanel.add(rightDownPanel);
 		
 		
 		this.add(rightMergePanel, BorderLayout.EAST);
