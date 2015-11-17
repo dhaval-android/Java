@@ -1,10 +1,15 @@
 package SubFrame;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+
+import Frame.main;
+import Infomation.Infomation;
 
 public class TopMenu extends JMenuBar{
 	
@@ -22,7 +27,18 @@ public class TopMenu extends JMenuBar{
 		this.setBackground(Color.WHITE);
 		
 		menu1 = new JMenu("File");
-		menu1_item1 = new JMenuItem("메뉴1-1");
+		menu1_item1 = new JMenuItem("New DrawPanel");
+		menu1_item1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				int DrawFrameCnt= Infomation.getInstance().getDrawFrame_Count();
+				Infomation.getInstance().addDrawFrame_Count();
+				main.mainframe.addDrawFrame(""+DrawFrameCnt+"번쨰 그림판");
+				
+			}
+		});
 		menu1_item2 = new JMenuItem("메뉴1-2");
 		menu1_item3 = new JMenuItem("메뉴1-3");
 		menu1_item4 = new JMenuItem("메뉴1-4");

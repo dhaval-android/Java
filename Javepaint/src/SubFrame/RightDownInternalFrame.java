@@ -8,7 +8,7 @@ public class RightDownInternalFrame extends JInternalFrame{
 	
 	public RightDownInternalFrame()
 	{
-		super("RightDown",true,false,true,true);
+		super("RightDown",true,false,false,true);
 		setSize(300,390);
 		
 		setBackground(Color.WHITE);

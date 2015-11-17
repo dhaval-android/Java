@@ -2,6 +2,7 @@ package Frame;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
@@ -12,7 +13,8 @@ import SubFrame.RightUpInternalFrame;
 
 public class MainDesktopPane extends JDesktopPane{
 	
-	private DrawInternalFrame drawInternalFrame;
+//	private DrawInternalFrame drawInternalFrame;
+	private HashMap<String, DrawInternalFrame> drawInternalFrameSet;
 	private RightUpInternalFrame rightUpInternalFrame;
 	private RightDownInternalFrame rightDownInternalFrame;
 	private ImageIcon backgrountIcon;
@@ -21,6 +23,7 @@ public class MainDesktopPane extends JDesktopPane{
 	public MainDesktopPane()
 	{
 	
+		drawInternalFrameSet= new HashMap<String, DrawInternalFrame>();
 	
 		this.setVisible(true);
 		this.setBackground(Color.DARK_GRAY);
@@ -28,9 +31,7 @@ public class MainDesktopPane extends JDesktopPane{
 		
 		backgrountIcon = new ImageIcon("resource/ui_1_01.png");
 		
-		
 
-		drawInternalFrame = new DrawInternalFrame();
 		rightUpInternalFrame = new RightUpInternalFrame();
 		rightDownInternalFrame = new RightDownInternalFrame();
 		
@@ -41,7 +42,7 @@ public class MainDesktopPane extends JDesktopPane{
 
 		
 
-		this.add(drawInternalFrame);
+//		this.add(drawInternalFrame);
 		this.add(rightUpInternalFrame);
 		this.add(rightDownInternalFrame);
 
@@ -50,7 +51,19 @@ public class MainDesktopPane extends JDesktopPane{
 	@Override
 	public void paintComponent(Graphics g)
 	{
-		g.drawImage(backgrountIcon.getImage(), 300, 50, null);
+		int width = getWidth();
+		int height = getHeight();
+		g.drawImage(backgrountIcon.getImage(), width/2-400, height/2-350, null);
+		rightUpInternalFrame.setLocation(width-300, 0);
+		rightDownInternalFrame.setLocation(width-300,400);
+
+	}
+	
+
+	
+	public void addDrawFrameToSet(String name, DrawInternalFrame newFrame)
+	{
+		drawInternalFrameSet.put(name, newFrame);	
 	}
 
 }

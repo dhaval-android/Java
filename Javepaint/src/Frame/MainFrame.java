@@ -1,8 +1,11 @@
 package Frame;
 
 import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
+
 import SubFrame.BottomLabel;
+import SubFrame.DrawInternalFrame;
 import SubFrame.LeftPanel;
 import SubFrame.TopMenu;
 import SubFrame.TopPanel;
@@ -15,6 +18,7 @@ public class MainFrame extends JFrame{
 	private BottomLabel bottomLabel;
 	private TopPanel topPanel;
 	private TopMenu menuBar;	
+	private  MainDesktopPane mainDesktopPane;
 
 	
 	public MainFrame(String name)
@@ -41,8 +45,19 @@ public class MainFrame extends JFrame{
 
 		
 		
-		MainDesktopPane mainDesktopPane= new MainDesktopPane();
+		mainDesktopPane= new MainDesktopPane();
 		this.add(mainDesktopPane);
 	}
+	
+	
+	public void addDrawFrame(String name)
+	{
+		DrawInternalFrame newFrame = new DrawInternalFrame(name);
+		newFrame.setSize(500, 500);
+		mainDesktopPane.addDrawFrameToSet(name, newFrame);
+		mainDesktopPane.add(newFrame);
+	}
+
+
 	
 }
