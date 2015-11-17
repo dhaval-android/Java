@@ -1,5 +1,7 @@
 package Frame;
 
+import java.awt.Color;
+
 import javax.swing.JDesktopPane;
 
 import SubFrame.DrawInternalFrame;
@@ -15,7 +17,10 @@ public class MainDesktopPane extends JDesktopPane{
 	public MainDesktopPane()
 	{
 		this.setVisible(true);
+		this.setBackground(Color.DARK_GRAY);
 		this.setDragMode(JDesktopPane.OUTLINE_DRAG_MODE);
+		
+		
 		
 		drawInternalFrame = new DrawInternalFrame();
 		rightUpInternalFrame = new RightUpInternalFrame();
@@ -24,7 +29,7 @@ public class MainDesktopPane extends JDesktopPane{
 		
 		
 		rightUpInternalFrame.setLocation(1190, 0);
-		rightDownInternalFrame.setLocation(1190,410);
+		rightDownInternalFrame.setLocation(1190,400);
 		
 		
 		this.add(drawInternalFrame);

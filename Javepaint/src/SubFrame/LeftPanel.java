@@ -15,7 +15,7 @@ public class LeftPanel extends JPanel{
 	
 	public LeftPanel()
 	{
-		this.setBackground(Color.WHITE);
+		this.setBackground(Color.DARK_GRAY);
 		
 		this.setLayout(new GridLayout(8, 2));
 		button1 = new JButton("1");

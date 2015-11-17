@@ -10,7 +10,7 @@ public class main {
 		// TODO Auto-generated method stub
 		
 		MainFrame mainframe = new MainFrame();
-		mainframe.setBackground(Color.WHITE);
+		mainframe.setBackground(Color.DARK_GRAY);
 		mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainframe.setSize(1600,900);
 		mainframe.setVisible(true);
