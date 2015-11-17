@@ -1,44 +1,49 @@
 package SubFrame;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class LeftPanel extends JPanel{
 
+	private ImageIcon ic_Circle,ic_Line,ic_Rec,ic_Triangle;
 	private JButton button1,button2,button3,button4,button5,button6,button7,button8,button9,button10;
 	
 	
 	public LeftPanel()
 	{
 		this.setBackground(Color.DARK_GRAY);
+		this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
 		
-		this.setLayout(new GridLayout(8, 2));
-		button1 = new JButton("1");
-		button2 = new JButton("2");
-		button3 = new JButton("3");
-		button4 = new JButton("4");
-		button5 = new JButton("5");
-		button6 = new JButton("6");
-		button7 = new JButton("7");
-		button8 = new JButton("8");
-		button9 = new JButton("9");
-		button10 = new JButton("10");
+		ic_Circle = new ImageIcon("resource/circle.png");
+		ic_Line = new ImageIcon("resource/line.png");
+		ic_Rec = new ImageIcon("resource/rec.png");
+		ic_Triangle = new ImageIcon("resource/triangle.png");
+		
+		
+		
+		button1 = new JButton(ic_Circle);
+		button2 = new JButton(ic_Line);
+		button3 = new JButton(ic_Rec);
+		button4 = new JButton(ic_Triangle);
+
+		
+		button1.setSize(50, 50); button1.setBackground(Color.DARK_GRAY);  button1.setBorderPainted(false); button1.setFocusPainted(false);
+		button2.setSize(50, 50); button2.setBackground(Color.DARK_GRAY);  button2.setBorderPainted(false); button2.setFocusPainted(false);
+		button3.setSize(50, 50); button3.setBackground(Color.DARK_GRAY);  button3.setBorderPainted(false); button3.setFocusPainted(false);
+		button4.setSize(50, 50); button4.setBackground(Color.DARK_GRAY);  button4.setBorderPainted(false); button4.setFocusPainted(false);
+		
+
 		
 		this.add(button1);
 		this.add(button2);
 		this.add(button3);
 		this.add(button4);
-		this.add(button5);
-		this.add(button6);
-		this.add(button7);
-		this.add(button8);
-		this.add(button9);
-		this.add(button10);
+
 		JLabel a;
 		
 		

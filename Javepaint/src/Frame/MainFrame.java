@@ -17,16 +17,17 @@ public class MainFrame extends JFrame{
 	private TopMenu menuBar;	
 
 	
-	public MainFrame()
+	public MainFrame(String name)
 	{
 	
-	
+		super(name);
 		//패널 객체 생성
 		leftPanel = new LeftPanel();
 		bottomLabel = new BottomLabel("바닥");
 		topPanel = new TopPanel();
 	
 
+		
 		//패널 위치에 배정
 
 		this.add(leftPanel, BorderLayout.WEST);
