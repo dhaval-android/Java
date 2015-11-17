@@ -33,8 +33,8 @@ public class TopMenu extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				int DrawFrameCnt= Infomation.getInstance().getDrawFrame_Count();
-				Infomation.getInstance().addDrawFrame_Count();
+				int DrawFrameCnt= Infomation.getDrawFrame_Count();
+				Infomation.addDrawFrame_Count();
 				main.mainframe.addDrawFrame(""+DrawFrameCnt+"번쨰 그림판");
 				
 			}
