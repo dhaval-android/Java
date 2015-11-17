@@ -39,7 +39,7 @@ public class LeftPanel extends JPanel{
 		this.add(button8);
 		this.add(button9);
 		this.add(button10);
-		
+		JLabel a;
 		
 		
 		
