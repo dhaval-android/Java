@@ -20,6 +20,8 @@ public class DrawInternalFrame extends JInternalFrame implements MouseListener, 
 	public DrawInternalFrame(String name)
 	{
 		super(name,true,true,true,true);
+		
+	
 		this.mName=name;
 		setSize(500,500);
 		setBackground(Color.WHITE);

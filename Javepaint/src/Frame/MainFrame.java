@@ -31,11 +31,10 @@ public class MainFrame extends JFrame{
 		leftPanel = new LeftPanel();
 		bottomLabel = new BottomLabel("Start");
 		topPanel = new TopPanel();
-	
 
 		
 		//패널 위치에 배정
-
+		
 		this.add(leftPanel, BorderLayout.WEST);
 		this.add(bottomLabel, BorderLayout.SOUTH);
 		this.add(topPanel,BorderLayout.NORTH);

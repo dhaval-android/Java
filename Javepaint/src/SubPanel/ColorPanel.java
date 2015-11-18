@@ -1,55 +1,85 @@
 package SubPanel;
 
+import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JColorChooser;
 import javax.swing.JPanel;
+import javax.swing.Popup;
 
 import Infomation.Infomation;
 
 public class ColorPanel extends JPanel{
 	
 	
+	private Button moreColorButton;
+	private JPanel choosePanel;
+	
 	public ColorPanel()
-	{
-		this.setLayout(new GridLayout(6,11));
+	{	
+		this.setLayout(new BorderLayout());
+		
+		choosePanel = new JPanel();
+		
+		GridLayout colorLayout = new GridLayout(7,11);
+		choosePanel.setLayout(colorLayout);
 
-		for(int i=0;i<6;i++){
+		for(int i=0;i<7;i++){
 			for(int j=0;j<11;j++)
 			{
-				Button temp = new Button();
+				JButton temp = new JButton();
 				Color tempColor = null;
 				switch(i)
 				{
-				case 0: tempColor= new Color(255,255/10*(j%11),0); break;
-				case 1: tempColor= new Color(255,0,255/10*(j%11)); break;
-				case 2: tempColor= new Color(255/10*(j%11),255,0); break;
-				case 3: tempColor= new Color(0,255,255/10*(j%11)); break;
-				case 4: tempColor= new Color(0,255/10*(j%11),255); break;
-				case 5: tempColor= new Color(255/10*(j%11),255/10*(j%11),255); break;
+				case 0: tempColor= new Color(255/10*(j%11),255/10*(j%11),255/10*(j%11)); break;
+				case 1: tempColor= new Color(255,255/10*(j%11),0); break;
+				case 2: tempColor= new Color(255,0,255/10*(j%11)); break;
+				case 3: tempColor= new Color(255/10*(j%11),255,0); break;
+				case 4: tempColor= new Color(0,255,255/10*(j%11)); break;
+				case 5: tempColor= new Color(0,255/10*(j%11),255); break;
+				case 6: tempColor= new Color(255/10*(j%11),255/10*(j%11),255); break;
 				}
 				
-				temp.setSize(10, 10);
+				temp.setBorderPainted(false);
+				
 				temp.setBackground(tempColor);
 				temp.addActionListener(new ActionListener(){
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
-						Button current = (Button)e.getSource();
+						JButton current = (JButton)e.getSource();
 						Color curColor=current.getBackground();
-						
 						Infomation.getInstance().setCurrentColor
 						(curColor.getRed(), curColor.getGreen(), curColor.getBlue());
 					}
 					
 				});
-				this.add(temp);
+				choosePanel.add(temp);
 			}
 		}
+		
+
+		this.add(choosePanel,BorderLayout.CENTER);
+		moreColorButton = new Button("More Color");
+		moreColorButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+
+//				Color selectedColor=jColorChooser.getColor();
+//				Infomation.getInstance().setCurrentColor(selectedColor.getRed(), selectedColor.getGreen(), selectedColor.getBlue());
+				
+			}
+		});
+		this.add(moreColorButton,BorderLayout.SOUTH);
+		
 		
 	}
 	

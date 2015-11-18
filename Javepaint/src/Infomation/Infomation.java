@@ -25,6 +25,7 @@ public class Infomation {
 	public static final int MODE_DRAW_TRIANGLE=2;
 	public static final int MODE_DRAW_CIRCLE=3;
 	public static final int MODE_DRAW_LINE=4;
+	public static final int MODE_ERAGE=5;
 	
 	private int DrawFrame_Count =1;
 	private int CurrentMode=0;
@@ -43,6 +44,7 @@ public class Infomation {
 		case MODE_DRAW_TRIANGLE : return "삼각형 그리기";
 		case MODE_DRAW_CIRCLE : return "원 그리기";
 		case MODE_DRAW_LINE : return "선 그리기";
+		case MODE_ERAGE : return "지우기";
 		default : return "선택된 모드가 없습니다.";
 		}
 		
