@@ -1,12 +1,17 @@
 package SubFrame;
 
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.JInternalFrame;
 
 import DrawPanel.DrawPanel;
+import Frame.main;
+import Infomation.Infomation;
 
-public class DrawInternalFrame extends JInternalFrame{
+public class DrawInternalFrame extends JInternalFrame implements MouseListener, MouseMotionListener{
 	
 	private DrawPanel draw;
 	private String mName;
@@ -21,9 +26,61 @@ public class DrawInternalFrame extends JInternalFrame{
 		
 		draw = new DrawPanel();
 		add(draw);
+		addMouseListener(this);
+		addMouseMotionListener(this);
 		
 		
 		setVisible(true);
+	
 	}
+
+		@Override
+		public void mouseDragged(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		@Override
+		public void mouseMoved(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+			main.mainframe.setBottomLabel("X : "+e.getX()+" Y : "+e.getY());
+		}
+
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
 
 }

@@ -38,7 +38,7 @@ public class MainDesktopPane extends JDesktopPane{
 		
 		
 		rightUpInternalFrame.setLocation(1190, 0);
-		rightDownInternalFrame.setLocation(1190,400);
+		rightDownInternalFrame.setLocation(1190,360);
 
 		
 
@@ -55,7 +55,7 @@ public class MainDesktopPane extends JDesktopPane{
 		int height = getHeight();
 		g.drawImage(backgrountIcon.getImage(), width/2-400, height/2-350, null);
 		rightUpInternalFrame.setLocation(width-300, 0);
-		rightDownInternalFrame.setLocation(width-300,400);
+		rightDownInternalFrame.setLocation(width-300,350);
 
 	}
 	

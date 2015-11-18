@@ -1,9 +1,11 @@
 package Frame;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 import javax.swing.JFrame;
 
+import Infomation.Infomation;
 import SubFrame.BottomLabel;
 import SubFrame.DrawInternalFrame;
 import SubFrame.LeftPanel;
@@ -27,7 +29,7 @@ public class MainFrame extends JFrame{
 		super(name);
 		//패널 객체 생성
 		leftPanel = new LeftPanel();
-		bottomLabel = new BottomLabel("바닥");
+		bottomLabel = new BottomLabel("Start");
 		topPanel = new TopPanel();
 	
 
@@ -58,6 +60,13 @@ public class MainFrame extends JFrame{
 		mainDesktopPane.add(newFrame);
 	}
 
+	public void setBottomLabel(String text)
+	{
+		Color color =Infomation.getInstance().getCurrentColor();
+		String mode = Infomation.getInstance().getCurrentModeToString();
+		bottomLabel.setText("현재 모드 : "+ mode+"   현재 좌표 : "+ text +
+				"    R : "+ color.getRed()+" G : "+ color.getGreen()+" B : "+ color.getBlue());
+	}
 
 	
 }

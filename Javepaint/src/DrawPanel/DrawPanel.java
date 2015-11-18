@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 public class DrawPanel extends JPanel{
 	
 	
+	
 	public DrawPanel()
 	{
 		setBackground(Color.red);
@@ -18,8 +19,7 @@ public class DrawPanel extends JPanel{
 	
 	@Override
 	public void paintComponent(Graphics g)
-	{
-		
+	{	
 		int width = getWidth();
 		int height = getHeight();
 		

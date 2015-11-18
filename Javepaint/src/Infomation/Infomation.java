@@ -1,5 +1,7 @@
 package Infomation;
 
+import java.awt.Color;
+
 public class Infomation {
 
 	public static Infomation instance;
@@ -19,11 +21,44 @@ public class Infomation {
 	public static final int PROGRAM_WIDTH = 1600;
 	public static final int PROGRAM_HEIGHT = 900;
 	
+	public static final int MODE_DRAW_REC=1;
+	public static final int MODE_DRAW_TRIANGLE=2;
+	public static final int MODE_DRAW_CIRCLE=3;
+	public static final int MODE_DRAW_LINE=4;
 	
-	public static int DrawFrame_Count =1;
+	private int DrawFrame_Count =1;
+	private int CurrentMode=0;
+	
+	private Color currentColor=new Color(0,0,0);
 	
 	
-	public static int getDrawFrame_Count(){return DrawFrame_Count;}
-	public static void addDrawFrame_Count(){DrawFrame_Count++;}
+	public  int getDrawFrame_Count(){return DrawFrame_Count;}
+	public  void addDrawFrame_Count(){DrawFrame_Count++;}
 	
+	public String getCurrentModeToString()
+	{
+		switch(CurrentMode)
+		{
+		case MODE_DRAW_REC : return "사각형 그리기";
+		case MODE_DRAW_TRIANGLE : return "삼각형 그리기";
+		case MODE_DRAW_CIRCLE : return "원 그리기";
+		case MODE_DRAW_LINE : return "선 그리기";
+		default : return "선택된 모드가 없습니다.";
+		}
+		
+	}
+
+	public void setCurrentMode(int mode)
+	{
+		CurrentMode=mode;
+	}
+	
+	public Color getCurrentColor()
+	{
+		return currentColor;
+	}
+	public void setCurrentColor(int R, int G, int B)
+	{
+		currentColor= new Color(R,G,B);
+	}
 }
