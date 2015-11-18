@@ -7,9 +7,9 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JInternalFrame;
 
-import DrawPanel.DrawPanel;
 import Frame.main;
 import Infomation.Infomation;
+import SubPanel.DrawPanel;
 
 public class DrawInternalFrame extends JInternalFrame implements MouseListener, MouseMotionListener{
 	

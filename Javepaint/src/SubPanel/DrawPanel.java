@@ -1,4 +1,4 @@
-package DrawPanel;
+package SubPanel;
 
 import java.awt.Color;
 import java.awt.Graphics;

@@ -59,6 +59,7 @@ public class Infomation {
 	}
 	public void setCurrentColor(int R, int G, int B)
 	{
-		currentColor= new Color(R,G,B);
+		Color changeColor = new Color(R,G,B);
+		currentColor= changeColor;
 	}
 }
