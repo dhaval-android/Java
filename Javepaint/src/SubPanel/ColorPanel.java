@@ -3,6 +3,7 @@ package SubPanel;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +14,7 @@ import Infomation.Infomation;
 
 public class ColorPanel extends JPanel{
 	
-	private Button moreColorButton;
+	private JButton moreColorButton;
 	private JPanel choosePanel;
 	
 
@@ -64,7 +65,9 @@ public class ColorPanel extends JPanel{
 		
 
 		this.add(choosePanel,BorderLayout.CENTER);
-		moreColorButton = new Button("More Color");
+		moreColorButton = new JButton("More Color");
+		moreColorButton.setBackground(Color.DARK_GRAY);
+		moreColorButton.setFont(new Font("More Color",Font.BOLD,20));
 		moreColorButton.addActionListener(new ActionListener() {
 			
 			@Override
