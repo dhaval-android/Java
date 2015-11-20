@@ -27,6 +27,12 @@ public class Infomation {
 	public static final int MODE_DRAW_LINE=4;
 	public static final int MODE_ERAGE=5;
 	
+	
+	
+	
+	
+	
+	
 	private int DrawFrame_Count =1;
 	private int CurrentMode=0;
 	
