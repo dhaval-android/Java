@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import Frame.main;
-import Infomation.Infomation;
+import Information.Information;
 
 public class ColorPanel extends JPanel{
 	
@@ -53,7 +53,7 @@ public class ColorPanel extends JPanel{
 						// TODO Auto-generated method stub
 						JButton current = (JButton)e.getSource();
 						Color curColor=current.getBackground();
-						Infomation.getInstance().setCurrentColor
+						Information.getInstance().setCurrentColor
 						(curColor.getRed(), curColor.getGreen(), curColor.getBlue());
 						main.mainframe.setBottomLabel(curColor);
 					}

@@ -10,7 +10,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import Frame.main;
-import Infomation.Infomation;
+import Information.Information;
 
 public class TopMenu extends JMenuBar{
 	
@@ -35,8 +35,8 @@ public class TopMenu extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				int DrawFrameCnt = Infomation.getInstance().getDrawFrame_Count();	
-				Infomation.getInstance().addDrawFrame_Count();
+				int DrawFrameCnt = Information.getInstance().getDrawFrame_Count();	
+				Information.getInstance().addDrawFrame_Count();
 				main.mainframe.addDrawFrame(""+DrawFrameCnt+"번쨰 그림판");
 				
 			}

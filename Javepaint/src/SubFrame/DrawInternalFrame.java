@@ -1,6 +1,7 @@
 package SubFrame;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -8,7 +9,6 @@ import java.awt.event.MouseMotionListener;
 import javax.swing.JInternalFrame;
 
 import Frame.main;
-import Infomation.Infomation;
 import SubPanel.DrawPanel;
 
 public class DrawInternalFrame extends JInternalFrame implements MouseListener, MouseMotionListener{
@@ -39,7 +39,7 @@ public class DrawInternalFrame extends JInternalFrame implements MouseListener, 
 		@Override
 		public void mouseDragged(MouseEvent e) {
 			// TODO Auto-generated method stub
-			
+
 		}
 
 
@@ -47,8 +47,7 @@ public class DrawInternalFrame extends JInternalFrame implements MouseListener, 
 		public void mouseMoved(MouseEvent e) {
 			// TODO Auto-generated method stub
 			
-			main.mainframe.setBottomLabel("X : "+e.getX()+" Y : "+e.getY());
-		}
+			main.mainframe.setBottomLabel("X : "+e.getX()+" Y : "+e.getY());		}
 
 
 		@Override

@@ -5,7 +5,7 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 
-import Infomation.Infomation;
+import Information.Information;
 import SubFrame.BottomLabel;
 import SubFrame.DrawInternalFrame;
 import SubFrame.GetSpecifcColorInternalFrame;
@@ -62,15 +62,15 @@ public class MainFrame extends JFrame{
 
 	public void setBottomLabel(String text)
 	{
-		Color color =Infomation.getInstance().getCurrentColor();
-		String mode = Infomation.getInstance().getCurrentModeToString();
+		Color color =Information.getInstance().getCurrentColor();
+		String mode = Information.getInstance().getCurrentModeToString();
 		bottomLabel.setText("현재 모드 : "+ mode+"   현재 좌표 : "+ text +
 				"    R : "+ color.getRed()+" G : "+ color.getGreen()+" B : "+ color.getBlue());
 	}
 	
 	public void setBottomLabel(Color color)
 	{
-		String mode = Infomation.getInstance().getCurrentModeToString();
+		String mode = Information.getInstance().getCurrentModeToString();
 		bottomLabel.setText("현재 모드 : "+ mode+"   현재 좌표 : Out of frame"+ "    R : "+ color.getRed()+" G : "+ color.getGreen()+" B : "+ color.getBlue());
 	}
 

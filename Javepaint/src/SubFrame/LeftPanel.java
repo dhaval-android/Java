@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import Infomation.Infomation;
+import Information.Information;
 
 public class LeftPanel extends JPanel implements ActionListener{
 
@@ -68,11 +68,11 @@ public class LeftPanel extends JPanel implements ActionListener{
 		
 		switch(currentButton.getName())
 		{
-		case "circle" : Infomation.getInstance().setCurrentMode(Infomation.MODE_DRAW_CIRCLE); break;
-		case "line" : Infomation.getInstance().setCurrentMode(Infomation.MODE_DRAW_LINE); break;
-		case "rec" : Infomation.getInstance().setCurrentMode(Infomation.MODE_DRAW_REC); break;
-		case "triangle" : Infomation.getInstance().setCurrentMode(Infomation.MODE_DRAW_TRIANGLE); break;
-		case "era" : Infomation.getInstance().setCurrentMode(Infomation.MODE_ERAGE); break;
+		case "circle" : Information.getInstance().setCurrentMode(Information.MODE_DRAW_CIRCLE); break;
+		case "line" : Information.getInstance().setCurrentMode(Information.MODE_DRAW_LINE); break;
+		case "rec" : Information.getInstance().setCurrentMode(Information.MODE_DRAW_REC); break;
+		case "triangle" : Information.getInstance().setCurrentMode(Information.MODE_DRAW_TRIANGLE); break;
+		case "era" : Information.getInstance().setCurrentMode(Information.MODE_ERAGE); break;
 		
 		default : break;
 		}
