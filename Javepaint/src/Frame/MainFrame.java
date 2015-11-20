@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import Infomation.Infomation;
 import SubFrame.BottomLabel;
 import SubFrame.DrawInternalFrame;
+import SubFrame.GetSpecifcColorInternalFrame;
 import SubFrame.LeftPanel;
 import SubFrame.TopMenu;
 import SubFrame.TopPanel;
@@ -31,11 +32,10 @@ public class MainFrame extends JFrame{
 		leftPanel = new LeftPanel();
 		bottomLabel = new BottomLabel("Start");
 		topPanel = new TopPanel();
-	
 
 		
 		//패널 위치에 배정
-
+		
 		this.add(leftPanel, BorderLayout.WEST);
 		this.add(bottomLabel, BorderLayout.SOUTH);
 		this.add(topPanel,BorderLayout.NORTH);
@@ -67,6 +67,20 @@ public class MainFrame extends JFrame{
 		bottomLabel.setText("현재 모드 : "+ mode+"   현재 좌표 : "+ text +
 				"    R : "+ color.getRed()+" G : "+ color.getGreen()+" B : "+ color.getBlue());
 	}
+	
+	public void setBottomLabel(Color color)
+	{
+		String mode = Infomation.getInstance().getCurrentModeToString();
+		bottomLabel.setText("현재 모드 : "+ mode+"   현재 좌표 : Out of frame"+ "    R : "+ color.getRed()+" G : "+ color.getGreen()+" B : "+ color.getBlue());
+	}
+
+	public void callColorFrame()
+	{
+		GetSpecifcColorInternalFrame getSpecifcColorInternalFrame = new GetSpecifcColorInternalFrame();
+		mainDesktopPane.add(getSpecifcColorInternalFrame);
+	}
+
+
 
 	
 }

@@ -66,4 +66,5 @@ public class MainDesktopPane extends JDesktopPane{
 		drawInternalFrameSet.put(name, newFrame);	
 	}
 
+
 }
