@@ -16,7 +16,7 @@ public class main {
 		mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainframe.setSize(Infomation.PROGRAM_WIDTH,Infomation.PROGRAM_HEIGHT);
 		mainframe.setVisible(true);
-		
+	
 	}
 
 }

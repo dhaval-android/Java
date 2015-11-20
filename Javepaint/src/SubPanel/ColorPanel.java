@@ -12,7 +12,6 @@ import Infomation.Infomation;
 
 public class ColorPanel extends JPanel{
 	
-	
 	public ColorPanel()
 	{
 		this.setLayout(new GridLayout(6,11));
